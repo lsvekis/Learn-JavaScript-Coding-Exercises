@@ -1,0 +1,11 @@
+function pruneUndefined(obj) {
+  for (const key in obj) {
+    if (obj[key] === undefined) {
+      console.warn(`Property ${key} is undefined, removing it`);
+      delete obj[key];
+    }
+  }
+}
+const data = { name: "Alice", age: undefined, city: "Paris", extra: undefined };
+pruneUndefined(data);
+console.log(data); // { name: "Alice", city: "Paris" }
