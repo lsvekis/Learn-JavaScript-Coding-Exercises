@@ -1,0 +1,14 @@
+// 1. Create the array
+const nums = [1, 2, 3, 4, 5];
+// 2. forEach to print each number * 2
+nums.forEach(num => {
+  console.log(`${num} * 2 =`, num * 2);
+});
+// 3. map to create a new array of squared values
+const squared = nums.map(num => num ** 2);
+console.log("Squared array:", squared);
+// 4. filter to create an array of even numbers
+const even = nums.filter(num => num % 2 === 0);
+console.log("Even numbers:", even);
+// 5. Original array remains unchanged
+console.log("Original nums:", nums);
