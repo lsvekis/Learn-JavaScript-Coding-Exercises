@@ -1,0 +1,16 @@
+// 1. Create the array
+let letters = ["a", "b", "c", "d", "e"];
+// 2. Remove "c"
+letters.splice(2, 1); 
+// Start at index 2, remove 1 element
+console.log("After removing 'c':", letters);
+// 3. Insert "x" and "y" after "b"
+letters.splice(2, 0, "x", "y");
+// Start at index 2, remove 0 elements, add "x", "y"
+console.log("After inserting 'x' and 'y':", letters);
+// 4. Slice the last three elements
+let subset = letters.slice(-3); 
+// Negative index -3 means start from the third-last element
+console.log("Subset (last three elements):", subset);
+// 5. Print final arrays
+console.log("Final letters array:", letters);
