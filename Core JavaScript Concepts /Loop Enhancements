@@ -1,0 +1,14 @@
+// 1. for...of with an array
+const colors = ["Red", "Green", "Blue"];
+for (const color of colors) {
+  console.log("Color:", color);
+}
+// 2. for...in with an object
+const user = {
+  name: "Daisy",
+  age: 30,
+  country: "USA"
+};
+for (const key in user) {
+  console.log(`Property: ${key}, Value: ${user[key]}`);
+}
