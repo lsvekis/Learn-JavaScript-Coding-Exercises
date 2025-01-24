@@ -1,0 +1,12 @@
+function requiredArgs(a, b) {
+  if (arguments.length < 2) {
+    throw new Error("Function requires 2 arguments");
+  }
+  return a + b;
+}
+try {
+  console.log(requiredArgs(5, 10)); // 15
+  console.log(requiredArgs(5));     // Error
+} catch (err) {
+  console.error("Invalid call:", err.message);
+}
