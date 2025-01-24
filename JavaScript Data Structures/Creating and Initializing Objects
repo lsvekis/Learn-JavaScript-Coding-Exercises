@@ -1,0 +1,12 @@
+// 1. Create the object
+const person = {
+  name: "Alice",
+  age: 30,
+  city: "New York"
+};
+// 2. Print entire object
+console.log("Person object:", person);
+// 3. Print name (dot notation)
+console.log("Name:", person.name);
+// 4. Print city (bracket notation)
+console.log("City:", person["city"]);
