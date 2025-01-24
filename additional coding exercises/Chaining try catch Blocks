@@ -1,0 +1,23 @@
+function parseUserData(json) {
+  return JSON.parse(json);
+}
+function computeStats(user) {
+  if (!user.age || !user.name) {
+    throw new Error("Missing user fields");
+  }
+  return { name: user.name, isAdult: user.age >= 18 };
+}
+// Usage
+let parsedData;
+try {
+  parsedData = parseUserData('{"name": "Alice"}');
+  console.log("Parsing successful:", parsedData);
+} catch (err) {
+  console.error("Parsing error:", err.message);
+}
+try {
+  const stats = computeStats(parsedData); // user.age is undefined => Error
+  console.log("Computed stats:", stats);
+} catch (err) {
+  console.error("Stats error:", err.message);
+}
