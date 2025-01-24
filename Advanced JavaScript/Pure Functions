@@ -1,0 +1,14 @@
+function addPure(a, b) {
+  // No side effects, no external dependencies
+  return a + b;
+}
+console.log(addPure(2, 3)); // 5
+console.log(addPure(2, 3)); // 5 (same output, no matter what)
+// Demonstrate it's pure by showing no external state is changed
+let externalVar = 10;
+function impureAdd(a) {
+  externalVar += a; // modifies external state - impure
+  return externalVar;
+}
+console.log("Impure result:", impureAdd(5));  // externalVar becomes 15
+console.log("Impure result:", impureAdd(5));  // externalVar becomes 20, different output
