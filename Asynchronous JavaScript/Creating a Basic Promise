@@ -1,0 +1,20 @@
+function getNumberPromise() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const randomNumber = Math.random();
+      if (randomNumber > 0.3) {
+        resolve(randomNumber);
+      } else {
+        reject("Number too small!");
+      }
+    }, 1000);
+  });
+}
+// Test the promise
+getNumberPromise()
+  .then((num) => {
+    console.log("Resolved with number:", num);
+  })
+  .catch((err) => {
+    console.error("Rejected with error:", err);
+  });
