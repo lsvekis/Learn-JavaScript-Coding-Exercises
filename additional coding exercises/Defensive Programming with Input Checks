@@ -1,0 +1,15 @@
+function calculateRectangleArea(width, height) {
+  if (typeof width !== "number" || typeof height !== "number") {
+    throw new Error("Width and height must be numbers");
+  }
+  if (width <= 0 || height <= 0) {
+    throw new Error("Width and height must be positive");
+  }
+  return width * height;
+}
+try {
+  console.log("Area:", calculateRectangleArea(5, 3));
+  console.log("Area:", calculateRectangleArea(-1, 2)); // triggers error
+} catch (e) {
+  console.error("Validation error:", e.message);
+}
