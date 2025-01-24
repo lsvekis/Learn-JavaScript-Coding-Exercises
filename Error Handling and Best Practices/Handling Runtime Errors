@@ -1,0 +1,12 @@
+function parseJSON(data) {
+  try {
+    const result = JSON.parse(data);
+    console.log("Parsed successfully:", result);
+  } catch (error) {
+    console.error("Parsing failed:", error.message);
+  }
+}
+// Valid JSON
+parseJSON('{"name": "Alice"}');
+// Invalid JSON (missing a quote)
+parseJSON('{"name": "Alice}');
