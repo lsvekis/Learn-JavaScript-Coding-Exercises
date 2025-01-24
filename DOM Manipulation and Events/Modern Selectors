@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercise 2</title>
+</head>
+<body>
+  <div>
+    <span class="highlight">First Highlight</span>
+  </div>
+  <ul>
+    <li class="highlight">Second Highlight</li>
+    <li class="highlight">Third Highlight</li>
+  </ul>
+  <script>
+    // Using querySelector to get the FIRST match
+    const firstHighlight = document.querySelector(".highlight");
+    console.log("First .highlight element:", firstHighlight);
+    // Using querySelectorAll to get ALL matches
+    const allHighlights = document.querySelectorAll(".highlight");
+    console.log("All .highlight elements:", allHighlights);
+  </script>
+</body>
+</html>
