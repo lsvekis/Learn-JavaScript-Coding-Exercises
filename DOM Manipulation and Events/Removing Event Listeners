@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercise 8</title>
+</head>
+<body>
+  <button id="stopBtn">Stop Logging</button>
+  <script>
+    const stopBtn = document.getElementById("stopBtn");
+    function handleClick() {
+      console.log("Clicked!");
+    }
+    // Add the event listener
+    stopBtn.addEventListener("click", handleClick);
+    // Remove the listener after 3 clicks for demonstration (you can choose any logic)
+    let clickCount = 0;
+    stopBtn.addEventListener("click", () => {
+      clickCount++;
+      if (clickCount === 3) {
+        stopBtn.removeEventListener("click", handleClick);
+        console.log("Listener removed after 3 clicks.");
+      }
+    });
+  </script>
+</body>
+</html>
