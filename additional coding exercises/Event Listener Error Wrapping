@@ -1,0 +1,10 @@
+<button id="testBtn">Click Me</button>
+<script>
+  document.getElementById("testBtn").addEventListener("click", () => {
+    try {
+      throw new Error("Error in click handler");
+    } catch (err) {
+      console.error("Caught in event:", err.message);
+    }
+  });
+</script>
