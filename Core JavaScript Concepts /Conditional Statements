@@ -1,0 +1,27 @@
+let day = "Wed";
+switch (day) {
+  case "Mon":
+    console.log("Back to work!");
+    break;
+  case "Tue":
+    console.log("Team meeting day.");
+    break;
+  case "Wed":
+    console.log("Midweek hustle.");
+    break;
+  case "Thu":
+    console.log("Project brainstorming.");
+    break;
+  case "Fri":
+    console.log("Wrap up tasks.");
+    break;
+  case "Sat":
+    console.log("Weekend relaxation!");
+    break;
+  case "Sun":
+    console.log("Family day.");
+    break;
+  default:
+    console.log("Unknown day, do whatever you like!");
+    break;
+}
