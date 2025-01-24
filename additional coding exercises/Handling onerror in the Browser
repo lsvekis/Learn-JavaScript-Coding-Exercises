@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Global Error Handling</title>
+</head>
+<body>
+  <script>
+    window.onerror = function (message, source, lineno, colno, error) {
+      console.error("Global Error Caught:");
+      console.error("Message:", message);
+      console.error("Source:", source);
+      console.error("Line/Column:", lineno + ":" + colno);
+      console.error("Error Object:", error);
+    };
+    // Force an error
+    nonExistentFunction(); // Uncaught ReferenceError
+  </script>
+</body>
+</html>
