@@ -1,0 +1,24 @@
+function checkNumber(num) {
+  if (typeof num !== "number") {
+    throw new TypeError("Value must be a number");
+  }
+  if (num < 0) {
+    throw new RangeError("Number must be non-negative");
+  }
+  return "Number is valid";
+}
+try {
+  console.log(checkNumber("hello")); 
+} catch (err) {
+  console.error("Caught error:", err.name, err.message);
+}
+try {
+  console.log(checkNumber(-5));
+} catch (err) {
+  console.error("Caught error:", err.name, err.message);
+}
+try {
+  console.log(checkNumber(10));
+} catch (err) {
+  console.error("Caught error:", err.name, err.message);
+}
