@@ -1,0 +1,15 @@
+var itemVar = "Old var value";
+let itemLet = "Old let value";
+const itemConst = "Constant value";
+console.log("Initial Values:");
+console.log("itemVar:", itemVar);     // "Old var value"
+console.log("itemLet:", itemLet);     // "Old let value"
+console.log("itemConst:", itemConst); // "Constant value"
+// 2. Try reassigning
+itemVar = "New var value";    // allowed
+itemLet = "New let value";    // allowed
+// itemConst = "New const value"; // not allowed - causes an error
+console.log("\nAfter Reassignment:");
+console.log("itemVar:", itemVar);    // "New var value"
+console.log("itemLet:", itemLet);    // "New let value"
+// console.log("itemConst:", itemConst); // Will not work if re-assignment is attempted
