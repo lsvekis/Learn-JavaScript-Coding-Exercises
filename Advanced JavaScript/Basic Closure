@@ -1,0 +1,14 @@
+function createCounter() {
+  let count = 0;
+  function increment() {
+    count++;
+    console.log("Current count:", count);
+  }
+  return increment;
+}
+// Usage
+const counterA = createCounter();
+counterA(); // Current count: 1
+counterA(); // Current count: 2
+const counterB = createCounter();
+counterB(); // Current count: 1 (separate closure state)
