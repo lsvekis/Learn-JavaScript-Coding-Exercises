@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercise 3</title>
+</head>
+<body>
+  <div id="info">Original Info Text</div>
+  <script>
+    const infoDiv = document.getElementById("info");
+    // 1. Change text using textContent
+    infoDiv.textContent = "This is new plain text (no HTML formatting).";
+    // 2. Change text using innerHTML
+    infoDiv.innerHTML = "This is <strong>bold</strong> text with <em>HTML</em> tags.";
+  </script>
+</body>
+</html>
