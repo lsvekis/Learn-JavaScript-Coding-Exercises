@@ -1,0 +1,10 @@
+function addElementImmutable(array, element) {
+  // Option 1: Spread operator
+  return [...array, element];
+  // Option 2: array.concat(element)
+  // return array.concat(element);
+}
+const arr = [1, 2, 3];
+const newArr = addElementImmutable(arr, 4);
+console.log("Original array:", arr);  // [1, 2, 3]
+console.log("New array:", newArr);    // [1, 2, 3, 4]
