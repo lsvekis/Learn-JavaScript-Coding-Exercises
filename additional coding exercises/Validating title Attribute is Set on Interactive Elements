@@ -1,0 +1,9 @@
+function checkButtonTitles() {
+  const buttons = document.querySelectorAll("button, [role='button']");
+  buttons.forEach(btn => {
+    if (!btn.hasAttribute("title") && !btn.hasAttribute("aria-label")) {
+      console.warn("Button lacks title or aria-label:", btn);
+    }
+  });
+}
+checkButtonTitles();
