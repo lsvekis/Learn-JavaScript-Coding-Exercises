@@ -1,0 +1,7 @@
+function ensureUtf8Meta() {
+  const meta = [...document.getElementsByTagName("meta")].find(m => m.getAttribute("charset") === "UTF-8");
+  if (!meta) {
+    console.warn("Missing <meta charset='UTF-8'>. Some characters may display incorrectly.");
+  }
+}
+ensureUtf8Meta();
