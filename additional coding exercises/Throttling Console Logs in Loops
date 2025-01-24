@@ -1,0 +1,12 @@
+function loopWithThrottledLogs() {
+  const max = 100000;
+  const logInterval = 20000;
+  for (let i = 0; i < max; i++) {
+    // Log only at multiples of logInterval
+    if (i % logInterval === 0) {
+      console.log(`Progress: i = ${i}`);
+    }
+  }
+}
+loopWithThrottledLogs();
+Explanation
