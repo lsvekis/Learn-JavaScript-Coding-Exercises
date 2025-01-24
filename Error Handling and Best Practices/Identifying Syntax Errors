@@ -1,0 +1,4 @@
+function testSyntaxError() {
+  console.log("Hello, no syntax error!");
+}
+testSyntaxError();
