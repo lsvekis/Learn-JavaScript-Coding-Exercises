@@ -1,0 +1,8 @@
+// 1. Array of prices
+const prices = [10, 25, 30, 5];
+// 2. Use reduce to sum values
+const total = prices.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue;
+}, 0);
+// 3. Print the result
+console.log("Total sum:", total);
