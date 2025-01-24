@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Unhandled Rejection</title>
+</head>
+<body>
+  <script>
+    window.onunhandledrejection = function (event) {
+      console.error("Unhandled rejection caught:", event.reason);
+    };
+    // Unhandled promise rejection
+    new Promise((resolve, reject) => {
+      reject("Promise rejected with no catch!");
+    });
+  </script>
+</body>
+</html>
