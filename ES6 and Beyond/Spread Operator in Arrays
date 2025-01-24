@@ -1,0 +1,10 @@
+const arrA = [1, 2, 3];
+const arrB = [4, 5, 6];
+// 2. Merge arrays
+const mergedArr = [...arrA, ...arrB];
+console.log("Merged Array:", mergedArr); // [1, 2, 3, 4, 5, 6]
+// 3. Modify arrA
+arrA.push(99);
+console.log("Modified arrA:", arrA);         // [1, 2, 3, 99]
+console.log("Merged Array after arrA change:", mergedArr); 
+// Remains [1, 2, 3, 4, 5, 6], demonstrating a separate array
