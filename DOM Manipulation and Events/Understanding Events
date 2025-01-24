@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercise 7</title>
+</head>
+<body>
+  <button id="clickBtn">Click Me</button>
+  <script>
+    const clickBtn = document.getElementById("clickBtn");
+    clickBtn.addEventListener("click", () => {
+      console.log("Button was clicked!");
+    });
+  </script>
+</body>
+</html>
