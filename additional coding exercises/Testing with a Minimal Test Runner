@@ -1,0 +1,14 @@
+function assert(condition, message) {
+  if (!condition) throw new Error(message);
+}
+function add(x, y) {
+  return x + y;
+}
+// Test
+try {
+  assert(add(1, 2) === 3, "1 + 2 should be 3");
+  assert(add(-1, 1) === 0, "-1 + 1 should be 0");
+  console.log("All tests passed!");
+} catch (err) {
+  console.error("Test failed:", err.message);
+}
