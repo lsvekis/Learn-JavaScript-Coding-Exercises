@@ -1,0 +1,22 @@
+function withErrorHandling(fn) {
+  return function(...args) {
+    try {
+      return fn(...args);
+    } catch (error) {
+      console.error("Error in wrapped function:", error.message);
+      throw error; // re-throw if desired
+    }
+  };
+}
+function riskyOperation(x) {
+  if (x < 0) throw new Error("Negative value not allowed");
+  return Math.sqrt(x);
+}
+// Usage
+const safeRisky = withErrorHandling(riskyOperation);
+try {
+  console.log(safeRisky(4));  // 2
+  console.log(safeRisky(-1)); // triggers error
+} catch (err) {
+  console.error("Caught in outer:", err.message);
+}
