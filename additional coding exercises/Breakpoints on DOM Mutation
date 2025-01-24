@@ -1,0 +1,6 @@
+<div id="content">Hello</div>
+<script>
+  setTimeout(() => {
+    document.getElementById("content").innerHTML = "Changed!";
+  }, 2000);
+</script>
