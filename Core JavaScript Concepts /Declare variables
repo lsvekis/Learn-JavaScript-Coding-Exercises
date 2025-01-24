@@ -1,0 +1,13 @@
+var myName = "Alice";
+let currentCity = "London";
+const birthYear = 1990;
+// 2. Print each variable
+console.log("My name is:", myName);
+console.log("I live in:", currentCity);
+console.log("I was born in:", birthYear);
+// 3. Try reassigning
+myName = "Bob"; // Allowed (var)
+currentCity = "Paris"; // Allowed (let)
+// birthYear = 1992; // Will cause an error (const cannot be reassigned)
+console.log("Updated name is:", myName);
+console.log("Updated city is:", currentCity);
