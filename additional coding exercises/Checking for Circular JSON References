@@ -1,0 +1,9 @@
+const a = {};
+const b = { parent: a };
+a.child = b;
+try {
+  const str = JSON.stringify(a);
+  console.log("JSON string:", str);
+} catch (err) {
+  console.error("Error on stringify (circular ref):", err.message);
+}
