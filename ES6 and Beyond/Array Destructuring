@@ -1,0 +1,6 @@
+const favoriteFoods = ["Pizza", "Sushi", "Ice Cream"];
+// Destructure array
+const [food1, food2, food3] = favoriteFoods;
+console.log("First food:", food1);  // "Pizza"
+console.log("Second food:", food2); // "Sushi"
+console.log("Third food:", food3);  // "Ice Cream"
