@@ -1,0 +1,15 @@
+function safeGetUser(userId) {
+  if (userId === 1) {
+    return { id: 1, name: "Alice" };
+  }
+  // Return undefined if not found
+}
+function main() {
+  const user = safeGetUser(2);
+  if (!user) {
+    console.warn("No user returned!");
+    return;
+  }
+  console.log("User found:", user.name);
+}
+main(); // "No user returned!"
