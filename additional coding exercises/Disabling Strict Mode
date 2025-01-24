@@ -1,0 +1,6 @@
+// "use strict"; // Uncomment to see the difference
+function accidentalGlobal() {
+  oops = 42; // no let/var/const
+  console.log("accidental global var:", oops);
+}
+accidentalGlobal(); // works in sloppy mode, error in strict mode
