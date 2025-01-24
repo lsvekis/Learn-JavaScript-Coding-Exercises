@@ -1,0 +1,15 @@
+function safeAddListener(elem, event, handler) {
+  if (!elem._events) elem._events = {};
+  if (!elem._events[event]) elem._events[event] = new Set();
+  if (elem._events[event].has(handler)) {
+    console.warn(`Handler already added for ${event} on element`, elem);
+    return;
+  }
+  elem._events[event].add(handler);
+  elem.addEventListener(event, handler);
+}
+const btn = document.createElement("button");
+const handleClick = () => console.log("Clicked");
+for (let i = 0; i < 2; i++) {
+  safeAddListener(btn, "click", handleClick);
+}
