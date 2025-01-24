@@ -1,0 +1,7 @@
+try {
+  const largeJson = "[" + '"data",'.repeat(1000000) + '"end"]';
+  const parsedData = JSON.parse(largeJson);
+  console.log("Parsed large array length:", parsedData.length);
+} catch (err) {
+  console.error("Error parsing large data:", err.message);
+}
