@@ -1,0 +1,5 @@
+(function() {
+  const localVar = "I am local!";
+  console.log("Inside IIFE:", localVar);
+})();
+// console.log(localVar); // ReferenceError: localVar is not defined
