@@ -1,0 +1,29 @@
+function stepOne(data, callback) {
+  setTimeout(() => {
+    const result = data + 1;
+    console.log("Step One result:", result);
+    callback(result);
+  }, 500);
+}
+function stepTwo(data, callback) {
+  setTimeout(() => {
+    const result = data + 2;
+    console.log("Step Two result:", result);
+    callback(result);
+  }, 500);
+}
+function stepThree(data, callback) {
+  setTimeout(() => {
+    const result = data + 3;
+    console.log("Step Three result:", result);
+    callback(result);
+  }, 500);
+}
+// Callback Hell
+stepOne(0, (res1) => {
+  stepTwo(res1, (res2) => {
+    stepThree(res2, (finalRes) => {
+      console.log("Final Result:", finalRes);
+    });
+  });
+});
