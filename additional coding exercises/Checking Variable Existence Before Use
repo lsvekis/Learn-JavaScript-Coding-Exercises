@@ -1,0 +1,6 @@
+function printProperty(obj) {
+  console.log("Property value:", obj?.data ?? "No data property found");
+}
+printProperty({ data: 123 }); // "Property value: 123"
+printProperty({});            // "No data property found"
+printProperty(null);          // "No data property found"
