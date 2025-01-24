@@ -1,0 +1,18 @@
+function doTaskPromise() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (Math.random() < 0.5) {
+        reject("Promise rejected randomly.");
+      } else {
+        resolve("Task completed successfully!");
+      }
+    }, 500);
+  });
+}
+doTaskPromise()
+  .then((msg) => {
+    console.log("Success:", msg);
+  })
+  .catch((error) => {
+    console.error("Failure:", error);
+  });
