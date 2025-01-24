@@ -1,0 +1,10 @@
+const person = {
+  name: "Alice",
+  age: 28,
+  country: "Canada"
+};
+// Destructure with renaming
+const { name, age: yearsOld, country } = person;
+console.log("Name:", name);           // "Alice"
+console.log("Age (renamed):", yearsOld);  // 28
+console.log("Country:", country);     // "Canada"
