@@ -1,0 +1,13 @@
+// 1. Create a JSON string
+const jsonString = `{
+  "name": "Alice",
+  "age": 25,
+  "interests": ["coding", "music"]
+}`;
+// 2. Parse JSON into a JavaScript object
+const userObj = JSON.parse(jsonString);
+// 3. Log the user's name
+console.log("User's name:", userObj.name);
+// 4. Convert back to JSON
+const newJsonString = JSON.stringify(userObj);
+console.log("Stringified JSON:", newJsonString);
