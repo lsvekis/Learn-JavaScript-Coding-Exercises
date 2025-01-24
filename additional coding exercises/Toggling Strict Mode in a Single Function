@@ -1,0 +1,14 @@
+function strictFunction() {
+  "use strict";
+  x = 10; // ReferenceError
+}
+function nonStrictFunction() {
+  y = 20; // No error (in sloppy mode)
+}
+try {
+  strictFunction();
+} catch (e) {
+  console.error("Strict error caught:", e.message);
+}
+nonStrictFunction();
+console.log("y is now global in sloppy mode:", y);
