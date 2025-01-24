@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercise 1</title>
+</head>
+<body>
+  <h1 id="title">DOM Selection Exercise</h1>
+  <ul>
+    <li class="item">List Item 1</li>
+    <li class="item">List Item 2</li>
+    <li class="item">List Item 3</li>
+  </ul>
+  <p>This is a paragraph.</p>
+  <p>This is another paragraph.</p>
+  <script>
+    // 1. Select element by ID
+    const title = document.getElementById("title");
+    console.log("Element with ID 'title':", title);
+    // 2. Select elements by class
+    const items = document.getElementsByClassName("item");
+    console.log("Elements with class 'item':", items);
+    // 3. Select elements by tag name
+    const paragraphs = document.getElementsByTagName("p");
+    console.log("Paragraph elements:", paragraphs);
+  </script>
+</body>
+</html>
