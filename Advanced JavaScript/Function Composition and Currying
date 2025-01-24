@@ -1,0 +1,26 @@
+// Part A: Composition
+function double(x) {
+  return x * 2;
+}
+function increment(x) {
+  return x + 1;
+}
+function compose(f, g) {
+  return function(x) {
+    return f(g(x));
+  };
+}
+const incrementThenDouble = compose(double, increment);
+console.log(incrementThenDouble(5)); // increment(5)=6, double(6)=12
+// Part B: Currying
+function multiply(a, b) {
+  return a * b;
+}
+// Curried version
+function curriedMultiply(a) {
+  return function(b) {
+    return a * b;
+  };
+}
+const multiplyBy3 = curriedMultiply(3);
+console.log(multiplyBy3(5)); // 15
