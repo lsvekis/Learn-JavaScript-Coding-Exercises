@@ -1,0 +1,10 @@
+const numbers = [1, 2, 3, 4, 5];
+// 1. map
+const doubled = numbers.map((num) => num * 2);
+console.log("Doubled:", doubled);
+// 2. filter
+const evens = numbers.filter((num) => num % 2 === 0);
+console.log("Even numbers:", evens);
+// 3. reduce
+const sum = numbers.reduce((acc, num) => acc + num, 0);
+console.log("Sum:", sum);
