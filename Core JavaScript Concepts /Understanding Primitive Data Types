@@ -1,0 +1,13 @@
+let myString = "Hello World";       // String
+let myNumber = 42;                  // Number
+let myBoolean = true;               // Boolean
+let myUndefined;                    // Undefined
+let myNull = null;                  // Null
+let mySymbol = Symbol("uniqueId");  // Symbol
+// 2. Log the types
+console.log("myString is a:", typeof myString);
+console.log("myNumber is a:", typeof myNumber);
+console.log("myBoolean is a:", typeof myBoolean);
+console.log("myUndefined is a:", typeof myUndefined);
+console.log("myNull is a:", typeof myNull);    // Special case: typeof null returns "object"
+console.log("mySymbol is a:", typeof mySymbol);
