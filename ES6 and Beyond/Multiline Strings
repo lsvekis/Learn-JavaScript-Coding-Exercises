@@ -1,0 +1,6 @@
+const poem = `
+Roses are red,
+Violets are blue,
+ES6 is sweet,
+And so are you.
+`;
