@@ -1,0 +1,11 @@
+function asyncTask() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      Math.random() > 0.5 ? resolve("Success!") : reject("Failure!");
+    }, 1000);
+  });
+}
+asyncTask()
+  .then((msg) => console.log("Resolved:", msg))
+  .catch((err) => console.error("Rejected:", err))
+  .finally(() => console.log("Promise operation complete."));
