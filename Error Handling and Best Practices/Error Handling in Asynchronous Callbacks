@@ -1,0 +1,16 @@
+function fetchData(callback) {
+  setTimeout(() => {
+    if (Math.random() < 0.5) {
+      callback(new Error("Something went wrong!"), null);
+    } else {
+      callback(null, { userId: 1, name: "Alice" });
+    }
+  }, 1000);
+}
+fetchData((err, data) => {
+  if (err) {
+    console.error("Error in callback:", err.message);
+  } else {
+    console.log("Received data:", data);
+  }
+});
