@@ -1,0 +1,6 @@
+const firstName = "Jane";
+const lastName = "Doe";
+// Traditional concatenation
+console.log("Hello, my name is " + firstName + " " + lastName + ".");
+// Using template literals
+console.log(`Hello, my name is ${firstName} ${lastName}.`);
