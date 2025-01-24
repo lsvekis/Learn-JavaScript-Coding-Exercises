@@ -1,0 +1,14 @@
+const errorLogs = [];
+function recordError(errorMessage) {
+  errorLogs.push({
+    message: errorMessage,
+    timestamp: new Date()
+  });
+}
+// Example usage
+try {
+  throw new Error("Something went wrong!");
+} catch (err) {
+  recordError(err.message);
+}
+console.log("All recorded errors:", errorLogs);
