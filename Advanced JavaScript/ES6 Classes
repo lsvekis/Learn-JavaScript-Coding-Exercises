@@ -1,0 +1,12 @@
+class Car {
+  constructor(brand, model) {
+    this.brand = brand;
+    this.model = model;
+  }
+  startEngine() {
+    console.log(`Engine started for ${this.brand} ${this.model}`);
+  }
+}
+// Usage
+const myCar = new Car("Toyota", "Camry");
+myCar.startEngine(); // Engine started for Toyota Camry
