@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercise 5</title>
+</head>
+<body>
+  <div id="container"></div>
+  <script>
+    const container = document.getElementById("container");
+    // 1. Create a new paragraph element
+    const newParagraph = document.createElement("p");
+    newParagraph.textContent = "Dynamically Created!";
+    // 2. Append it to the container
+    container.appendChild(newParagraph);
+    // 3. Log container to see the new structure
+    console.log("Container:", container);
+  </script>
+</body>
+</html>
