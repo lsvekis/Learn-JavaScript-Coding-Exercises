@@ -1,0 +1,5 @@
+"use strict";
+function logThis() {
+  console.log("In strict mode, this is:", this);
+}
+logThis(); // undefined instead of window
