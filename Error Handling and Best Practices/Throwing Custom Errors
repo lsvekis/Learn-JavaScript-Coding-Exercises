@@ -1,0 +1,14 @@
+function validateAge(age) {
+  try {
+    if (age < 0 || age > 120) {
+      throw new RangeError(`Invalid age: ${age}`);
+    }
+    console.log(`Valid age: ${age}`);
+  } catch (error) {
+    console.error(`Error: ${error.message}`);
+  }
+}
+// Test
+validateAge(25);   // Valid age: 25
+validateAge(-5);   // Error: Invalid age: -5
+validateAge(200);  // Error: Invalid age: 200
