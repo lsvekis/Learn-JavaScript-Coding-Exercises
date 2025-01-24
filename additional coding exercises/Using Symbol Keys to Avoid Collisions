@@ -1,0 +1,10 @@
+const UNIQUE_KEY = Symbol("UniqueProperty");
+const settings = {
+  theme: "light",
+  [UNIQUE_KEY]: "This is hidden from normal iteration"
+};
+console.log("settings:", settings);
+for (let key in settings) {
+  console.log("Iterating key:", key); // won't show Symbol key
+}
+console.log("Accessing Symbol key:", settings[UNIQUE_KEY]); // works
