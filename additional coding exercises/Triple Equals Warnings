@@ -1,0 +1,8 @@
+console.log("'0' == 0:", "0" == 0);   // true
+console.log("'0' === 0:", "0" === 0); // false
+function compareValues(a, b) {
+  if (a == b) {
+    console.warn("Using '==' can lead to unexpected results!");
+  }
+}
+compareValues("0", 0);
