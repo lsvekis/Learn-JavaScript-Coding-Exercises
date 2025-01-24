@@ -1,0 +1,11 @@
+"use strict";
+const config = {
+  apiUrl: "https://example.com",
+  timeout: 5000
+};
+Object.freeze(config);
+try {
+  config.apiUrl = "https://malicious.com"; // TypeError in strict mode
+} catch (err) {
+  console.error("Mutation blocked:", err.message);
+}
