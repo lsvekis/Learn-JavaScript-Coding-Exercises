@@ -1,0 +1,12 @@
+// config.js
+export const config = {
+  apiKey: "123ABC",
+  endpoint: "https://api.example.com"
+};
+// main.js
+import { config } from "./config.js";
+function fetchData() {
+  console.log("Using config endpoint:", config.endpoint);
+  // fetch...
+}
+fetchData();
