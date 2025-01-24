@@ -1,0 +1,11 @@
+function addToArray(arr, item) {
+  // Logical error: unshift adds to the start
+  // arr.unshift(item); // incorrect logic
+  // Correct logic: push adds to the end
+  arr.push(item);
+  return arr;
+}
+// Test
+let myArr = [1, 2, 3];
+console.log(addToArray(myArr, 4)); // [1, 2, 3, 4] => correct
+// If using unshift: [4, 1, 2, 3] => not the intended result
