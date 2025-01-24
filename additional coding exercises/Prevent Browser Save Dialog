@@ -1,0 +1,6 @@
+document.addEventListener("keydown", (e) => {
+  if (e.ctrlKey && e.key.toLowerCase() === "s") {
+    e.preventDefault();
+    console.log("Intercepted Ctrl+S: Custom save logic here.");
+  }
+});
