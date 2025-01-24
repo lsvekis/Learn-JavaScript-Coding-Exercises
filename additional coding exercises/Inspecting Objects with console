@@ -1,0 +1,9 @@
+const user = {
+  name: "Bob",
+  preferences: {
+    theme: "dark",
+    notifications: true
+  }
+};
+console.log("Using console.log:", user);
+console.dir("Using console.dir:", user);
