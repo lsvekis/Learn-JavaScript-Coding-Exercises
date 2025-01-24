@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercise 10</title>
+  <style>
+    #outer {
+      border: 2px solid red;
+      padding: 20px;
+    }
+    #middle {
+      border: 2px solid green;
+      padding: 20px;
+    }
+    #inner {
+      border: 2px solid blue;
+      padding: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="outer">
+    <div id="middle">
+      <div id="inner">Click Me</div>
+    </div>
+  </div>
+  <script>
+    const outer = document.getElementById("outer");
+    const middle = document.getElementById("middle");
+    const inner = document.getElementById("inner");
+    // Bubbling phase (default, capture = false)
+    outer.addEventListener("click", () => {
+      console.log("Outer bubble");
+    });
+    middle.addEventListener("click", () => {
+      console.log("Middle bubble");
+    });
+    inner.addEventListener("click", () => {
+      console.log("Inner bubble");
+    });
+    // Capturing phase (capture = true)
+    outer.addEventListener("click", () => {
+      console.log("Outer capture");
+    }, true);
+    middle.addEventListener("click", () => {
+      console.log("Middle capture");
+    }, true);
+    inner.addEventListener("click", () => {
+      console.log("Inner capture");
+    }, true);
+  </script>
+</body>
+</html>
