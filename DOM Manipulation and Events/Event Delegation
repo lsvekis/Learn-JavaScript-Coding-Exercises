@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercise 9</title>
+</head>
+<body>
+  <ul id="parentList">
+    <li>Option 1</li>
+    <li>Option 2</li>
+    <li>Option 3</li>
+  </ul>
+  <script>
+    const parentList = document.getElementById("parentList");
+    parentList.addEventListener("click", (event) => {
+      // Check if the clicked element is an LI
+      if (event.target && event.target.nodeName === "LI") {
+        console.log("Clicked item:", event.target.textContent);
+      }
+    });
+  </script>
+</body>
+</html>
