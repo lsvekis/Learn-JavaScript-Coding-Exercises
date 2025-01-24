@@ -1,0 +1,8 @@
+// 1. Initialize the array
+let colors = ["red", "green", "blue"];
+// 2. Modify second element
+colors[1] = "yellow";
+// 3. Add new element at the end using index
+colors[colors.length] = "purple";
+// 4. Print the updated array
+console.log("Updated colors:", colors);
