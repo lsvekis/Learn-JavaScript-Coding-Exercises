@@ -1,0 +1,22 @@
+class ValidationError extends Error {
+  constructor(message, fieldName) {
+    super(message);
+    this.name = "ValidationError";
+    this.fieldName = fieldName;
+  }
+}
+function validateField(fieldValue) {
+  if (!fieldValue) {
+    throw new ValidationError("Field is required", "username");
+  }
+  return true;
+}
+try {
+  validateField("");
+} catch (error) {
+  if (error instanceof ValidationError) {
+    console.error(`ValidationError on ${error.fieldName}: ${error.message}`);
+  } else {
+    console.error("Other error:", error.message);
+  }
+}
