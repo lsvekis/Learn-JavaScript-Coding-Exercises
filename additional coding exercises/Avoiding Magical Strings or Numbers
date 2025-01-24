@@ -1,0 +1,11 @@
+const STATUS_ACTIVE = "ACTIVE";
+const STATUS_INACTIVE = "INACTIVE";
+function setStatus(user, status) {
+  if (status !== STATUS_ACTIVE && status !== STATUS_INACTIVE) {
+    throw new Error("Invalid status");
+  }
+  user.status = status;
+}
+const user = { name: "Carol" };
+setStatus(user, STATUS_ACTIVE);
+console.log("User status:", user.status);
