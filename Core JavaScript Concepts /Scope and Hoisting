@@ -1,0 +1,13 @@
+function hoistTest() {
+  console.log("Value of x before declaration:", x); // undefined due to hoisting
+  var x = 10;
+  console.log("Value of x after declaration:", x);  // 10
+}
+hoistTest();
+// 2. Block scope with let
+if (true) {
+  let blockScoped = "I exist only within this block";
+  console.log("Inside block:", blockScoped);
+}
+// Uncomment the next line to see the error
+// console.log("Outside block:", blockScoped); // ReferenceError: blockScoped is not defined
