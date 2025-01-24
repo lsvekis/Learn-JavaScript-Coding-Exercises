@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercise 4</title>
+  <style>
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <p id="styledParagraph">I will be styled dynamically</p>
+  <button id="toggleBtn">Toggle Highlight</button>
+  <script>
+    const paragraph = document.getElementById("styledParagraph");
+    const toggleBtn = document.getElementById("toggleBtn");
+    // 1. Change inline style
+    paragraph.style.color = "blue";
+    // 2. Add a class
+    paragraph.classList.add("highlight");
+    // 3. Toggle the class on button click
+    toggleBtn.addEventListener("click", () => {
+      paragraph.classList.toggle("highlight");
+    });
+  </script>
+</body>
+</html>
