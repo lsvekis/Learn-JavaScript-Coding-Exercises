@@ -1,0 +1,22 @@
+function getNumberPromise() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const randomNumber = Math.random();
+      randomNumber > 0.3
+        ? resolve(randomNumber)
+        : reject("Number too small!");
+    }, 1000);
+  });
+}
+async function processNumberAsync() {
+  try {
+    const num = await getNumberPromise();
+    console.log("Received number:", num);
+    const finalResult = num + 1;
+    console.log("After adding 1:", finalResult);
+    return finalResult;
+  } catch (error) {
+    console.error("Error in async function:", error);
+  }
+}
+processNumberAsync();
