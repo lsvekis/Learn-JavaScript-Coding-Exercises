@@ -1,0 +1,18 @@
+function nestedCheck(user) {
+  if (user) {
+    if (user.name) {
+      if (user.isActive) {
+        console.log("User is valid and active");
+      } else {
+        console.log("User is not active");
+      }
+    }
+  }
+}
+// After: Early Returns
+function flatCheck(user) {
+  if (!user) return;
+  if (!user.name) return;
+  if (!user.isActive) return console.log("User is not active");
+  console.log("User is valid and active");
+}
