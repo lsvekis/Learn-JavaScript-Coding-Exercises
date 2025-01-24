@@ -1,0 +1,23 @@
+function createDelayedPromise(name) {
+  return new Promise((resolve) => {
+    const delay = Math.floor(Math.random() * 1000) + 500;
+    setTimeout(() => {
+      resolve(`${name} finished in ${delay} ms`);
+    }, delay);
+  });
+}
+const promiseA = createDelayedPromise("A");
+const promiseB = createDelayedPromise("B");
+const promiseC = createDelayedPromise("C");
+// Promise.all
+Promise.all([promiseA, promiseB, promiseC])
+  .then((results) => {
+    console.log("All completed:", results);
+  })
+  .catch((err) => console.error("Error:", err));
+// Promise.race
+Promise.race([promiseA, promiseB, promiseC])
+  .then((fastest) => {
+    console.log("Fastest result:", fastest);
+  })
+  .catch((err) => console.error("Error:", err));
