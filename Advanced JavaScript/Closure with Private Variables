@@ -1,0 +1,27 @@
+function createBankAccount(initialBalance) {
+  let balance = initialBalance;
+  return {
+    deposit(amount) {
+      balance += amount;
+      console.log(`Deposited $${amount}, new balance: $${balance}`);
+    },
+    withdraw(amount) {
+      if (amount <= balance) {
+        balance -= amount;
+        console.log(`Withdrew $${amount}, new balance: $${balance}`);
+      } else {
+        console.log("Insufficient funds!");
+      }
+    },
+    getBalance() {
+      return balance;
+    },
+  };
+}
+// Usage
+const myAccount = createBankAccount(100);
+myAccount.deposit(50);  // Deposited $50, new balance: $150
+myAccount.withdraw(70); // Withdrew $70, new balance: $80
+console.log("Balance:", myAccount.getBalance()); // 80
+// Trying to access balance directly => not possible
+// console.log(myAccount.balance); // undefined
