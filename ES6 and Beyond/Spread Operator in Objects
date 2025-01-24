@@ -1,0 +1,9 @@
+const obj1 = { a: 1, b: 2, c: 3 };
+const obj2 = { b: 20, d: 4 };
+// Merge objects
+const mergedObj = { ...obj1, ...obj2 };
+console.log("Merged Object:", mergedObj); 
+// { a: 1, b: 20, c: 3, d: 4 }
+// Original objects remain unchanged
+console.log("obj1:", obj1); 
+console.log("obj2:", obj2);
