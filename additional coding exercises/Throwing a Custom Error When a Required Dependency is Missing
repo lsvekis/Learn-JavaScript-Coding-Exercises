@@ -1,0 +1,11 @@
+function requireGlobal(name) {
+  if (!window[name]) {
+    throw new Error(`Required global dependency "${name}" is not loaded`);
+  }
+}
+try {
+  requireGlobal("_"); // checks for Lodash
+  console.log("Lodash found!");
+} catch (err) {
+  console.error(err.message);
+}
