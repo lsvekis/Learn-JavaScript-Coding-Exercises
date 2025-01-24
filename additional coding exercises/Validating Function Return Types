@@ -1,0 +1,19 @@
+function enforceReturnType(fn, type) {
+  return function(...args) {
+    const result = fn(...args);
+    if (typeof result !== type) {
+      throw new Error(`Expected return type ${type}, got ${typeof result}`);
+    }
+    return result;
+  };
+}
+function multiply(a, b) {
+  return a * b;
+}
+const safeMultiply = enforceReturnType(multiply, "number");
+try {
+  console.log(safeMultiply(2, 3)); // OK
+  console.log(safeMultiply("oops", 4)); // result => NaN => typeof is "number" (still "number" ironically), but might do more checks
+} catch (err) {
+  console.error("Error:", err.message);
+}
