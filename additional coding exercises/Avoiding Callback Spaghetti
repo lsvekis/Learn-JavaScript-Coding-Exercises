@@ -1,0 +1,12 @@
+// Before: nested "spaghetti"
+fetchData((err, data) => {
+  if (err) return console.error(err);
+  processData(data, (err2, processed) => {
+    if (err2) return console.error(err2);
+    saveResult(processed, (err3) => {
+      if (err3) return console.error(err3);
+      console.log("All done!");
+    });
+  });
+});
+// After: Each function returns a Promise, chaining them is more readable
