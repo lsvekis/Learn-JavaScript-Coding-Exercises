@@ -1,0 +1,16 @@
+// 1. Create the array
+let tasks = ["Task1", "Task2", "Task3"];
+// 2. Add using push()
+tasks.push("Task4");
+console.log("After push:", tasks);
+// 3. Remove using pop()
+const removedTaskEnd = tasks.pop();
+console.log("Removed from end:", removedTaskEnd);
+console.log("After pop:", tasks);
+// 4. Add to front using unshift()
+tasks.unshift("Task0");
+console.log("After unshift:", tasks);
+// 5. Remove from front using shift()
+const removedTaskStart = tasks.shift();
+console.log("Removed from start:", removedTaskStart);
+console.log("After shift:", tasks);
