@@ -1,0 +1,12 @@
+function greet(name) {
+  console.log("Hello, " + name + "!");
+}
+greet("Eve");
+// 2. Function Expression
+const add = function(a, b) {
+  return a + b;
+};
+console.log("Sum using function expression:", add(5, 7));
+// 3. Arrow Function
+const addArrow = (a, b) => a + b; // Concise arrow function syntax
+console.log("Sum using arrow function:", addArrow(5, 7));
