@@ -1,0 +1,7 @@
+setTimeout(() => {
+  try {
+    throw new Error("Error in timeout callback");
+  } catch (err) {
+    console.error("Caught error in setTimeout:", err.message);
+  }
+}, 1000);
