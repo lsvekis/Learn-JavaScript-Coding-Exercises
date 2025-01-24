@@ -1,0 +1,17 @@
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+}
+function greet(person) {
+  if (!(person instanceof Person)) {
+    throw new Error("Argument is not a Person instance");
+  }
+  console.log(`Hello, ${person.name}`);
+}
+try {
+  greet(new Person("Alice")); // OK
+  greet({ name: "Bob" });     // Error
+} catch (err) {
+  console.error(err.message);
+}
