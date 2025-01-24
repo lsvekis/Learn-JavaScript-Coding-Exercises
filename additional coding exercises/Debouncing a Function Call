@@ -1,0 +1,11 @@
+function debounce(fn, delay) {
+  let timeout;
+  return function(...args) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => fn.apply(this, args), delay);
+  };
+}
+function onResize() {
+  console.log("Resized at:", new Date().toISOString());
+}
+window.addEventListener("resize", debounce(onResize, 300));
