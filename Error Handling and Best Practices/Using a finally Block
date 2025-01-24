@@ -1,0 +1,17 @@
+function processData(data) {
+  try {
+    if (!data) {
+      throw new Error("No data provided!");
+    }
+    console.log("Processing data:", data);
+    // Simulate success
+  } catch (err) {
+    console.error("Error during processing:", err.message);
+  } finally {
+    console.log("Operation complete (finally block).");
+  }
+}
+// Test with valid data
+processData("Sample data");
+// Test with no data
+processData();
