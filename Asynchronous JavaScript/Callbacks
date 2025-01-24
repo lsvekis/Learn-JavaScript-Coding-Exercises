@@ -1,0 +1,11 @@
+function fetchData(callback) {
+  console.log("Fetching data, please wait...");
+  setTimeout(() => {
+    // Simulate fetched data
+    const data = { userId: 1, username: "Alice" };
+    callback(data);
+  }, 1000);
+}
+fetchData((result) => {
+  console.log("Data received:", result);
+});
