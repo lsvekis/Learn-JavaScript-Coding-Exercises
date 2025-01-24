@@ -1,0 +1,16 @@
+"use strict";
+const settings = {
+  theme: "dark",
+  version: 1.0
+};
+Object.seal(settings);
+try {
+  settings.newProp = 123; // Error in strict mode
+} catch (err) {
+  console.error("Can't add new property:", err.message);
+}
+try {
+  delete settings.theme; // Also disallowed
+} catch (err) {
+  console.error("Can't delete property:", err.message);
+}
