@@ -1,0 +1,13 @@
+// 1. Create the nested object
+const student = {
+  name: "Bob",
+  grades: {
+    math: 90,
+    english: 85
+  }
+};
+// 2. Access math grade
+console.log("Math grade:", student.grades.math);
+// 3. Dynamic key access
+const subject = "english";
+console.log("English grade:", student.grades[subject]);
