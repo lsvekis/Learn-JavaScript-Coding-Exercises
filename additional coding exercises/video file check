@@ -1,0 +1,6 @@
+const vid = document.getElementById("video");
+vid.addEventListener("durationchange", () => {
+  if (vid.duration > 7200) {
+    console.warn(`Video is over 2 hours (duration: ${vid.duration}s). This may impact performance.`);
+  }
+});
