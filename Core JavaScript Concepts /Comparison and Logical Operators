@@ -1,0 +1,18 @@
+let age = 20;
+let hasTicket = true;
+// Using comparison and logical operators
+if (age >= 18 && hasTicket === true) {
+  console.log("You can enter the theater.");
+} else if (age >= 18 && hasTicket === false) {
+  console.log("Please buy a ticket.");
+} else {
+  console.log("You are not old enough to watch this movie.");
+}
+// Example with strict vs loose equality
+let numString = "10";
+if (numString == 10) {
+  console.log('Loose equality (==) considers "10" the same as 10');
+}
+if (numString === 10) {
+  console.log("This won't run because '10' (string) is not strictly equal to 10 (number).");
+}
