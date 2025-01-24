@@ -1,0 +1,16 @@
+function doTask() {
+  throw new Error("Task error");
+}
+function wrapper() {
+  try {
+    doTask();
+  } catch (err) {
+    console.error("Logging error:", err.message);
+    throw err; // re-throw
+  }
+}
+try {
+  wrapper();
+} catch (finalErr) {
+  console.log("Handled at final level:", finalErr.message);
+}
