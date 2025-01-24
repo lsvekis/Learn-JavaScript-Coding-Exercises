@@ -1,0 +1,8 @@
+greet.js
+export default function greet(name) {
+  console.log(`Hello, ${name}! Welcome to ES6 modules.`);
+}
+main.js
+import sayHello from './greet.js'; 
+// We can name it however we want since it's a default export.
+sayHello('Alice');
