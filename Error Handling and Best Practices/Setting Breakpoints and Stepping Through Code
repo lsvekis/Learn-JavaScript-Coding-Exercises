@@ -1,0 +1,9 @@
+function factorial(n) {
+  let result = 1;
+  for (let i = 1; i <= n; i++) {
+    // Place a breakpoint on the line below
+    result *= i;
+  }
+  return result;
+}
+console.log("Factorial of 5:", factorial(5));
