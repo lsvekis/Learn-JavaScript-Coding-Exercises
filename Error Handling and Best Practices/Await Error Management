@@ -1,0 +1,20 @@
+function doTaskPromise() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (Math.random() < 0.5) {
+        reject("Promise rejected randomly (async/await).");
+      } else {
+        resolve("Task completed successfully (async/await)!");
+      }
+    }, 500);
+  });
+}
+async function executeAsync() {
+  try {
+    const result = await doTaskPromise();
+    console.log("Async/Await success:", result);
+  } catch (error) {
+    console.error("Async/Await error:", error);
+  }
+}
+executeAsync();
