@@ -1,0 +1,27 @@
+function getNumberPromise() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const randomNumber = Math.random();
+      randomNumber > 0.3
+        ? resolve(randomNumber)
+        : reject("Number too small!");
+    }, 500);
+  });
+}
+getNumberPromise()
+  .then((num) => {
+    const result = num + 1;
+    console.log("After first then:", result);
+    return result;
+  })
+  .then((num) => {
+    const result = num + 1;
+    console.log("After second then:", result);
+    return result;
+  })
+  .then((finalNum) => {
+    console.log("All done! Final number:", finalNum);
+  })
+  .catch((error) => {
+    console.error("Error in chain:", error);
+  });
